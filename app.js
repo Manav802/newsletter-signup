@@ -11,7 +11,7 @@ app.get('/', function(req,res){
 });
 app.post('/',function(req,res){
     const firstName = req.body.FirstName;
-    const lastName = req.body.LastName;
+    const lastName = req.body.LstName;
     const email = req.body.Email;
     
     var data = {
@@ -60,8 +60,8 @@ app.post('/failiure',function(request,response){
     response.redirect("/");
 })
 
-app.listen(3000,function(){
-    console.log('server is running on port 3000');
+app.listen(process.env.PORT||3000,function(){
+    console.log('server is running');
 });
 //API KEY
 // ed1566bc6cbc65d5148dbf4b1896aac5-us10
