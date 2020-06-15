@@ -42,7 +42,7 @@ app.post('/',function(req,res){
         res.sendFile(__dirname+ '/success.html');
     }
     else{
-        res.sendFile(__dirname+'/failure.html');
+        res.sendFile(__dirname+'/failiure.html');
     }
 
     response.on('data',function(data){
