@@ -29,11 +29,11 @@ app.post('/',function(req,res){
     };
 
     var jsonData = JSON.stringify(data);
-    const url = 'https://us10.api.mailchimp.com/3.0/lists/a265c80ca1';
+    const url = 'https://us10.api.mailchimp.com/3.0/lists/listId';
     
     const options = {
         method: "post",
-        auth: 'Manav:ed1566bc6cbc65d5148dbf4b1896aac5-us10'
+        auth: 'apikey'
     }
    
     const request= https.request(url,options,function(response){
@@ -63,8 +63,3 @@ app.post('/failiure',function(request,response){
 app.listen(process.env.PORT||3000,function(){
     console.log('server is running');
 });
-//API KEY
-// ed1566bc6cbc65d5148dbf4b1896aac5-us10
-
-//list id
-//a265c80ca1
